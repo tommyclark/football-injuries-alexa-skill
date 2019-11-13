@@ -26,7 +26,7 @@ public class FootballInjuriesStreamHandler extends SkillStreamHandler {
                         new FootballInjuryIntentHandler()
                 )
                 // Add your skill id below
-                .withSkillId("amzn1.ask.skill.dec010b8-fb37-4c93-857b-3971ed4e0a11")
+                .withSkillId("amzn1.ask.skill.e74bf868-2b6e-4669-9a88-2569c5259894")
                 .build();
     }
 
