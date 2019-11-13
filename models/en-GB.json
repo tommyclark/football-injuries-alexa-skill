@@ -1,0 +1,34 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "football injuries",
+      "intents": [
+        {
+          "name": "FootballInjuryIntent",
+          "samples": [
+            "about {name}",
+            "is {name} injured"
+          ],
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.Person"
+            }
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        }
+      ]
+    }
+  }
+}
