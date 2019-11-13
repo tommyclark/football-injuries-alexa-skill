@@ -29,7 +29,7 @@ public class FootballInjuryIntentHandler implements IntentRequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput handlerInput, IntentRequest intentRequest) {
-        return intentRequest.getIntent().getName().equals("MPIntent");
+        return intentRequest.getIntent().getName().equals("FootballInjuryIntent");
     }
 
     @Override
