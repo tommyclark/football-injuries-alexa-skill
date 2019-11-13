@@ -5,19 +5,19 @@ jdk:
 before_deploy:
 - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package
 - mkdir lambda_jar
-- mv target/whosmymp-1.0-jar-with-dependencies.jar lambda_jar
+- mv target/football-injuries-1.0-jar-with-dependencies.jar lambda_jar
 - cd lambda_jar
-- jar xf whosmymp-1.0-jar-with-dependencies.jar
-- rm whosmymp-1.0-jar-with-dependencies.jar
+- jar xf football-injuries-1.0-jar-with-dependencies.jar
+- rm football-injuries-1.0-jar-with-dependencies.jar
 - cd ..
 
 deploy:
   provider: lambda
-  function_name: "whos-my-mp"
+  function_name: "football-injuries"
   region: "eu-west-1"
   role: "arn:aws:iam::458527370713:role/service-role/Execution"
   runtime: "java8"
-  module_name: "com.tommy.whosmymp"
+  module_name: "com.tommy.footballinjuries"
   handler_name: "FootballInjuriesStreamHandler"
   timeout: 10
   memory_size: 192
