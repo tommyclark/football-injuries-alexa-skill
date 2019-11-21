@@ -1,4 +1,4 @@
-package com.tommy.footballinjuries.utils;
+package com.footballinjuries.utils;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;

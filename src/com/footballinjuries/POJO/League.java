@@ -1,4 +1,4 @@
-package com.tommy.footballinjuries.POJO;
+package com.footballinjuries.POJO;
 
 import lombok.Data;
 

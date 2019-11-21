@@ -1,8 +1,8 @@
-package com.tommy.footballinjuries.utils;
+package com.footballinjuries.utils;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tommy.footballinjuries.POJO.Footballer;
+import com.footballinjuries.POJO.Footballer;
 
 public class ApiResponseMapper {
 
