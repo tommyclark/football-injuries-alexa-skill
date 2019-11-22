@@ -26,9 +26,7 @@ public class FootballInjuryIntentHandler implements IntentRequestHandler {
         final Slot name = intentRequest.getIntent().getSlots().get("name");
 
         if (isNull(name)) {
-            return handlerInput.getResponseBuilder()
-                    .withSpeech("Hmm, I could not find a footballer by that name.")
-                    .build();
+            return respond(handlerInput, "Hmm, I could not find a footballer by that name.");
         }
 
         Footballer footballer;
@@ -36,17 +34,19 @@ public class FootballInjuryIntentHandler implements IntentRequestHandler {
             com.squareup.okhttp.Response response = HttpUtils.getPlayerStatistics(name.getValue());
             footballer = ApiResponseMapper.map(response.body().string());
         } catch (IOException e) {
-            return handlerInput.getResponseBuilder()
-                    .withSpeech("The football injuries is currently experiencing problems. Please try again later.")
-                    .build();
+            return respond(handlerInput, "The football injuries skill is currently experiencing problems. Please try again later.");
         }
 
         String injuryString = !footballer.isInjured() ? "not " : "";
         final String speechOutput = String.format("%s is " + injuryString + "currently injured",
                 name.getValue());
 
+        return respond(handlerInput, speechOutput);
+    }
+
+    private Optional<Response> respond(HandlerInput handlerInput, String s) {
         return handlerInput.getResponseBuilder()
-                .withSpeech(speechOutput)
+                .withSpeech(s)
                 .build();
     }
 
