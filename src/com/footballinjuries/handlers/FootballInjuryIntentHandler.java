@@ -36,7 +36,9 @@ public class FootballInjuryIntentHandler implements IntentRequestHandler {
             com.squareup.okhttp.Response response = HttpUtils.getPlayerStatistics(name.getValue());
             footballer = ApiResponseMapper.map(response.body().string());
         } catch (IOException e) {
-            throw new IllegalStateException();
+            return handlerInput.getResponseBuilder()
+                    .withSpeech("The football injuries is currently experiencing problems. Please try again later.")
+                    .build();
         }
 
         String injuryString = !footballer.isInjured() ? "not " : "";
