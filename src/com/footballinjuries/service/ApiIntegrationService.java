@@ -1,4 +1,4 @@
-package com.footballinjuries.utils;
+package com.footballinjuries.service;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -6,9 +6,9 @@ import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 
-public class HttpUtils {
+public class ApiIntegrationService {
 
-    public static Response getPlayerStatistics(String footballerName) throws IOException {
+    public Response getPlayerStatistics(String footballerName) throws IOException {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()

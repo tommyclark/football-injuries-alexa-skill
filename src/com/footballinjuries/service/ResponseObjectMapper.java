@@ -1,12 +1,12 @@
-package com.footballinjuries.utils;
+package com.footballinjuries.service;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.footballinjuries.POJO.Footballer;
 
-public class ApiResponseMapper {
+public class ResponseObjectMapper {
 
-    public static Footballer map(String jsonString) {
+    public Footballer map(String jsonString) {
         try {
             ObjectMapper objectMapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 

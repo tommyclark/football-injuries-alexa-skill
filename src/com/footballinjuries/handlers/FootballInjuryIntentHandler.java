@@ -5,9 +5,8 @@ import com.amazon.ask.dispatcher.request.handler.impl.IntentRequestHandler;
 import com.amazon.ask.model.IntentRequest;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
-import com.footballinjuries.POJO.Footballer;
-import com.footballinjuries.utils.ApiResponseMapper;
-import com.footballinjuries.utils.HttpUtils;
+import com.footballinjuries.service.AlexaService;
+import com.footballinjuries.service.InjuryService;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -15,6 +14,15 @@ import java.util.Optional;
 import static java.util.Objects.isNull;
 
 public class FootballInjuryIntentHandler implements IntentRequestHandler {
+    private InjuryService injuryService;
+    private AlexaService alexaService;
+
+    public FootballInjuryIntentHandler(InjuryService injuryService,
+                                       AlexaService alexaService) {
+        this.injuryService = injuryService;
+        this.alexaService = alexaService;
+
+    }
 
     @Override
     public boolean canHandle(HandlerInput handlerInput, IntentRequest intentRequest) {
@@ -24,30 +32,14 @@ public class FootballInjuryIntentHandler implements IntentRequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput handlerInput, IntentRequest intentRequest) {
         final Slot name = intentRequest.getIntent().getSlots().get("name");
+        if (isNull(name)) return alexaService.respond(handlerInput, "Hmm, I could not find a footballer by that name.");
 
-        if (isNull(name)) {
-            return respond(handlerInput, "Hmm, I could not find a footballer by that name.");
-        }
-
-        Footballer footballer;
         try {
-            com.squareup.okhttp.Response response = HttpUtils.getPlayerStatistics(name.getValue());
-            footballer = ApiResponseMapper.map(response.body().string());
+            return alexaService.respond(handlerInput, injuryService.buildInjuryString(name.getValue()));
         } catch (IOException e) {
-            return respond(handlerInput, "The football injuries skill is currently experiencing problems. Please try again later.");
+            return alexaService.respond(handlerInput,
+                    "The football injuries skill is currently experiencing problems. Please try again later.");
         }
-
-        String injuryString = !footballer.isInjured() ? "not " : "";
-        final String speechOutput = String.format("%s is " + injuryString + "currently injured",
-                name.getValue());
-
-        return respond(handlerInput, speechOutput);
-    }
-
-    private Optional<Response> respond(HandlerInput handlerInput, String s) {
-        return handlerInput.getResponseBuilder()
-                .withSpeech(s)
-                .build();
     }
 
 }
