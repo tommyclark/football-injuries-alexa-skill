@@ -12,6 +12,8 @@ import com.footballinjuries.utils.HttpUtils;
 import java.io.IOException;
 import java.util.Optional;
 
+import static java.util.Objects.isNull;
+
 public class FootballInjuryIntentHandler implements IntentRequestHandler {
 
     @Override
@@ -22,6 +24,12 @@ public class FootballInjuryIntentHandler implements IntentRequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput handlerInput, IntentRequest intentRequest) {
         final Slot name = intentRequest.getIntent().getSlots().get("name");
+
+        if (isNull(name)) {
+            return handlerInput.getResponseBuilder()
+                    .withSpeech("Hmm, I could not find a footballer by that name.")
+                    .build();
+        }
 
         Footballer footballer;
         try {
