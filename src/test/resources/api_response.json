@@ -1,0 +1,396 @@
+{
+  "get": "players",
+  "parameters": {
+    "league": "2",
+    "search": "Wijnaldum"
+  },
+  "errors": [],
+  "results": 1,
+  "response": [
+    {
+      "player": {
+        "id": 300,
+        "name": "G. Wijnaldum",
+        "firstname": "Georginio",
+        "lastname": "Wijnaldum",
+        "age": 29,
+        "birth": {
+          "date": "11/11/1990",
+          "place": "Rotterdam",
+          "country": "Netherlands"
+        },
+        "nationality": "Netherlands",
+        "height": "175 cm",
+        "weight": "69 kg",
+        "injured": false
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 40,
+            "name": "Liverpool",
+            "logo": "https://media.api-football.com/teams/40.png"
+          },
+          "league": {
+            "id": 524,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-football.com/leagues/2.png",
+            "flag": "https://media.api-football.com/flags/gb.svg",
+            "season": "2019-2020"
+          },
+          "games": {
+            "appearences": 15,
+            "lineups": 15,
+            "minutes": 1265,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.860000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 6,
+            "bench": 0
+          },
+          "shots": {
+            "total": 20,
+            "on": 9
+          },
+          "goals": {
+            "total": 2,
+            "conceded": null,
+            "assists": null
+          },
+          "passes": {
+            "total": 579,
+            "key": 5,
+            "accuracy": 89
+          },
+          "tackles": {
+            "total": 14,
+            "blocks": 2,
+            "interceptions": 11
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": 29,
+            "success": 12,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 15,
+            "committed": 7
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 40,
+            "name": "Liverpool",
+            "logo": "https://media.api-football.com/teams/40.png"
+          },
+          "league": {
+            "id": 2,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-football.com/leagues/2.png",
+            "flag": "https://media.api-football.com/flags/gb.svg",
+            "season": "2018-2019"
+          },
+          "games": {
+            "appearences": 35,
+            "lineups": 32,
+            "minutes": 2735,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.873529",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 13,
+            "bench": 3
+          },
+          "shots": {
+            "total": 27,
+            "on": 10
+          },
+          "goals": {
+            "total": 3,
+            "conceded": null,
+            "assists": null
+          },
+          "passes": {
+            "total": 1557,
+            "key": 24,
+            "accuracy": 89
+          },
+          "tackles": {
+            "total": 28,
+            "blocks": 7,
+            "interceptions": 20
+          },
+          "duels": {
+            "total": 240,
+            "won": 125
+          },
+          "dribbles": {
+            "attempts": 47,
+            "success": 28,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 29,
+            "committed": 17
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 40,
+            "name": "Liverpool",
+            "logo": "https://media.api-football.com/teams/40.png"
+          },
+          "league": {
+            "id": 37,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-football.com/leagues/37.png",
+            "flag": "https://media.api-football.com/flags/gb.svg",
+            "season": "2017-2018"
+          },
+          "games": {
+            "appearences": 33,
+            "lineups": 27,
+            "minutes": 2387,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.827272",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 6,
+            "out": 6,
+            "bench": 8
+          },
+          "shots": {
+            "total": 38,
+            "on": 10
+          },
+          "goals": {
+            "total": 1,
+            "conceded": null,
+            "assists": 2
+          },
+          "passes": {
+            "total": 1138,
+            "key": 22,
+            "accuracy": 87
+          },
+          "tackles": {
+            "total": 11,
+            "blocks": 0,
+            "interceptions": 24
+          },
+          "duels": {
+            "total": 208,
+            "won": 108
+          },
+          "dribbles": {
+            "attempts": 55,
+            "success": 42,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 17,
+            "committed": 13
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 40,
+            "name": "Liverpool",
+            "logo": "https://media.api-football.com/teams/40.png"
+          },
+          "league": {
+            "id": 56,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-football.com/leagues/56.png",
+            "flag": "https://media.api-football.com/flags/gb.svg",
+            "season": "2016-2017"
+          },
+          "games": {
+            "appearences": 36,
+            "lineups": 33,
+            "minutes": 2978,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.988888",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 9,
+            "bench": 4
+          },
+          "shots": {
+            "total": 60,
+            "on": 20
+          },
+          "goals": {
+            "total": 6,
+            "conceded": null,
+            "assists": 9
+          },
+          "passes": {
+            "total": 1419,
+            "key": 44,
+            "accuracy": 86
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": 26
+          },
+          "duels": {
+            "total": 300,
+            "won": 145
+          },
+          "dribbles": {
+            "attempts": 40,
+            "success": 30,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 30,
+            "committed": 22
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        },
+        {
+          "team": {
+            "id": 34,
+            "name": "Newcastle",
+            "logo": "https://media.api-football.com/teams/34.png"
+          },
+          "league": {
+            "id": 696,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-football.com/leagues/56.png",
+            "flag": "https://media.api-football.com/flags/gb.svg",
+            "season": "2015-2016"
+          },
+          "games": {
+            "appearences": 38,
+            "lineups": 36,
+            "minutes": 3168,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.936842",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 7,
+            "bench": 2
+          },
+          "shots": {
+            "total": 54,
+            "on": 29
+          },
+          "goals": {
+            "total": 11,
+            "conceded": null,
+            "assists": 5
+          },
+          "passes": {
+            "total": 1062,
+            "key": 48,
+            "accuracy": 83
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": 27
+          },
+          "duels": {
+            "total": 341,
+            "won": 164
+          },
+          "dribbles": {
+            "attempts": 83,
+            "success": 50,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 51,
+            "committed": 16
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -10,11 +10,10 @@ public class Footballer {
 
     private String name;
 
-    private String firstName;
+    private String firstname;
 
-    private String lastName;
+    private String lastname;
 
     private boolean injured;
 
-    private List<PlayerStatistics> statistics;
 }

@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class ApiIntegrationService {
 
-    public Response getPlayerStatistics(String footballerName) throws IOException {
+    public String getPlayerStatistics(String footballerName) throws IOException {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
@@ -18,6 +18,10 @@ public class ApiIntegrationService {
                 .addHeader("x-rapidapi-key", "8b7a2aa6a8mshd15126ff3a2d037p11abc4jsnfb17f8ac72bb")
                 .build();
 
-        return client.newCall(request).execute();
+        return getBody(client.newCall(request).execute());
+    }
+
+    private String getBody(Response response) throws IOException {
+        return response.body().string();
     }
 }

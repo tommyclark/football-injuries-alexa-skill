@@ -21,7 +21,6 @@ public class FootballInjuryIntentHandler implements IntentRequestHandler {
                                        AlexaService alexaService) {
         this.injuryService = injuryService;
         this.alexaService = alexaService;
-
     }
 
     @Override

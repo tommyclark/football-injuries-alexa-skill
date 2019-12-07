@@ -17,7 +17,7 @@ deploy:
   region: "eu-west-1"
   role: "arn:aws:iam::458527370713:role/service-role/Execution"
   runtime: "java8"
-  module_name: "com.tommy.footballinjuries"
+  module_name: "com.tommy.com.footballinjuries"
   handler_name: "FootballInjuriesStreamHandler"
   timeout: 10
   memory_size: 192

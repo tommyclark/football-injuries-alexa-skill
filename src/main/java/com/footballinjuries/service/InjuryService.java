@@ -13,12 +13,9 @@ public class InjuryService {
         this.responseObjectMapper = responseObjectMapper;
     }
 
-    public boolean isInjured(String name) throws IOException {
-        Footballer footballer;
-
-        com.squareup.okhttp.Response response = apiIntegrationService.getPlayerStatistics(name);
-        footballer = responseObjectMapper.map(response.body().string());
-
+    private boolean isInjured(String name) throws IOException {
+        String response = apiIntegrationService.getPlayerStatistics(name);
+        Footballer footballer = responseObjectMapper.map(response);
         return footballer.isInjured();
     }
 
