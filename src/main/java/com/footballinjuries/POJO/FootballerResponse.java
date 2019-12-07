@@ -1,6 +1,7 @@
 package com.footballinjuries.POJO;
 
 import lombok.Data;
+
 import java.util.List;
 
 @Data

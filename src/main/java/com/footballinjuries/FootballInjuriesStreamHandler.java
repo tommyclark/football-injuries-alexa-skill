@@ -15,7 +15,10 @@ public class FootballInjuriesStreamHandler extends SkillStreamHandler {
         return Skills.standard()
                 .addRequestHandlers(
                         new FootballInjuryIntentHandler(
-                                new InjuryService(new ApiIntegrationService(), new ResponseObjectMapper()),
+                                new InjuryService(
+                                        new ApiIntegrationService("https://api-football-beta.p.rapidapi.com"),
+                                        new ResponseObjectMapper()
+                                ),
                                 new AlexaService()
                                 )
                 )
