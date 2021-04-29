@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.amazon.alexa:ask-sdk
+    versions:
+    - 2.37.1
+    - 2.38.0
+  - dependency-name: org.projectlombok:lombok
+    versions:
+    - 1.18.18
